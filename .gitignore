@@ -1,0 +1,41 @@
+# Python / FastAPI
+backend/__pycache__/
+backend/.venv/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.coverage
+backend/instance/
+backend/env/
+backend/.DS_Store
+
+# VS Code
+.vscode/
+.idea/
+.venv/
+
+# MacOS
+.DS_Store
+
+# Node / React frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.DS_Store
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Test output
+coverage/
+htmlcov/
+.pytest_cache/
+
+# System files
+Thumbs.db

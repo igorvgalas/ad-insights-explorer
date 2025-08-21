@@ -1,0 +1,15 @@
+MOCK_POSTS = [
+    {"userId": 1, "id": 1, "title": "short", "body": "a"},
+    {"userId": 1, "id": 2, "title": "My Post Title", "body": "b"},
+    {"userId": 1, "id": 3, "title": "My Post Title", "body": "c"},
+    {"userId": 1, "id": 4, "title": "AI Basics", "body": "d"},
+    {"userId": 1, "id": 5, "title": "AI Basic", "body": "e"},
+    {"userId": 1, "id": 6, "title": "Basics of AI", "body": "f"},
+    {"userId": 1, "id": 7, "title": "Basic AI Concepts", "body": "g"},
+    {"userId": 1, "id": 8, "title": "A.I. Basics", "body": "h"},
+    {"userId": 1, "id": 9, "title": "AI: The Basics", "body": "i"},
+    {"userId": 1, "id": 10, "title": "AI - Basics", "body": "j"},
+    {"userId": 1, "id": 11, "title": "AI Basic", "body": "e"},
+    {"userId": 1, "id": 12, "title": "AI Basic", "body": "e"},
+    {"userId": 1, "id": 13, "title": "AI Basic", "body": "e"},
+]
