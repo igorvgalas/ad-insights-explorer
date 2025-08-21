@@ -9,5 +9,5 @@ def test_duplicate_title_detector():
     
     assert len(anomalies) >= 1
     assert anomalies[0]["reason"] == "Duplicate title"
-    assert anomalies[0]["title"] == "My Post Title"  # ✅ це правильний дублікат у твоїх MOCK_POSTS
+    assert anomalies[0]["title"] == "My Post Title"
 

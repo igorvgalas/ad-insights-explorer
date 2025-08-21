@@ -20,7 +20,7 @@ class TTLCache:
     def set(self, value: Any):
         self._timestamp = time.time()
         self._value = value
-        self._request_count = 0  # reset request count on new value
+        self._request_count = 0
 
     def clear(self):
         self._timestamp = 0
