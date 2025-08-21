@@ -29,10 +29,20 @@ A lightweight full-stack application to fetch, analyze, and display post data fr
 
 ## Backend Setup
 
+### How to Run (Linux/macOS)
+
+```bash
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+### How to run (Windows)
 ```bash
 cd backend
 python -m venv .venv
-source .venv/bin/activate
+.venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
@@ -86,4 +96,4 @@ frontend/
 
 ## ✍️ Author
 
-Ihor Halas – [GitHub](https://github.com/YOUR_USERNAME)
+Ihor Halas – [GitHub](https://github.com/igorvgalas)
