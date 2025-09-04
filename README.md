@@ -7,6 +7,7 @@ A lightweight full-stack application to fetch, analyze, and display post data fr
 ## Features
 
 ### Backend (FastAPI)
+
 - Fetches real-time posts from JSONPlaceholder.
 - Detects:
   - Short titles
@@ -21,11 +22,13 @@ A lightweight full-stack application to fetch, analyze, and display post data fr
 - Full test coverage (unit & integration)
 
 ### Frontend (React + React Query + TanStack Table + Chackra UI)
+
 - Anomalies Table with sorting & filtering
 - Summary Panel with insights
 - Easily testable and modular structure
 
 ---
+
 
 ## Backend Setup
 
@@ -38,7 +41,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
+
 ### How to run (Windows)
+
 ```bash
 cd backend
 python -m venv .venv
@@ -51,11 +56,11 @@ uvicorn main:app --reload
 
 ### API Endpoints
 
-| Endpoint      | Description                     |
-|---------------|---------------------------------|
-| `/posts`      | Fetch all posts                 |
-| `/anomalies`  | Detect anomalies in titles      |
-| `/summary`    | Generate post insights summary  |
+| Endpoint     | Description                    |
+| ------------ | ------------------------------ |
+| `/posts`     | Fetch all posts                |
+| `/anomalies` | Detect anomalies in titles     |
+| `/summary`   | Generate post insights summary |
 
 ### Testing
 
@@ -65,13 +70,18 @@ pytest tests/
 ```
 
 Test coverage includes:
+
 - Detectors (short, duplicate, similar)
 - PostFetcher (mocked httpx)
 - API endpoints (integration via `httpx.AsyncClient`)
 
 ---
 
-##  Frontend Setup
+## Frontend Setup
+
+### Node.js
+
+This project requires **Node.js v18.x** or higher for the frontend. Please ensure you have the correct version installed.
 
 ```bash
 cd frontend

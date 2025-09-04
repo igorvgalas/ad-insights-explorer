@@ -25,24 +25,15 @@ class PostFetcher:
         self.cache = TTLCache(ttl_seconds=ttl_seconds)
         self.timeout = timeout
         self.max_requests = max_requests_per_ttl
-        self._request_count = 0
-        self._ttl_start = time.time()
-
-    def _reset_if_ttl_expired(self):
-        if time.time() - self._ttl_start > self.cache.ttl_seconds:
-            self._request_count = 0
-            self._ttl_start = time.time()
 
     async def fetch(self) -> List[Dict[str, Any]]:
-        self._reset_if_ttl_expired()
-
         cached = self.cache.get()
-        if cached:
-            return cached
+        request_count = self.cache.get_request_count()
 
-        if self._request_count >= self.max_requests:
-            logger.warning("Max fetch requests exceeded during TTL window. Returning fallback.")
-            return cached or []
+        if cached is not None and request_count < self.max_requests:
+            self.cache.increment_request_count()
+            print(f"Returning cached data. request_count={request_count+1}, max_requests={self.max_requests}")
+            return cached
 
         try:
             async with httpx.AsyncClient(timeout=self.timeout) as client:
@@ -54,7 +45,6 @@ class PostFetcher:
                     raise ValueError("Expected a list of posts")
 
                 self.cache.set(posts)
-                self._request_count += 1
                 return posts
 
         except httpx.RequestError as exc:
